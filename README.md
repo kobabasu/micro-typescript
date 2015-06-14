@@ -28,6 +28,17 @@ docker run --net=host --name -p 80:80 -p 443:443 -v /home/core/share/app:/var/ww
 1. hub clone kobabasu/phalcon-rest api
 1. rm -fr api/.git
 
+## mysql
+1. table作成
+```
+mysql -h 0.0.0.0 --port 3306 -u[username] -p[password] -d [dbname] < sql api/sql/user.sql
+```
+1. レコードをinsert
+```
+curl -i -X POST -d '{"name":"taro", "email":"taro@example.com"}'
+```
+1. http://localhost:8080/api/users/で確認
+
 ## app
 1. touch .bowerrc bower.json
 1. .bowerrc
