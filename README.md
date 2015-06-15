@@ -15,7 +15,7 @@
 ## docker
 1. mysql
 ```
-docker run --net=host --name mysql -p 3306:3306 -e "ROOT_PW=..." -e "DB_NAME=..." -e "DB_USER=..." -e "DB_PASS=..." -d anagift/msyql:0.74
+docker run --net=host --name mysql -p 3306:3306 -e "ROOT_PW=..." -e "DB_NAME=..." -e "DB_USER=..." -e "DB_PASS=..." -d anagift/mysql:0.74
 ```
 1. apache
 ```
@@ -35,7 +35,7 @@ mysql -h 0.0.0.0 --port 3306 -u[username] -p[password] -d [dbname] < sql api/sql
 ```
 1. レコードをinsert
 ```
-curl -i -X POST -d '{"name":"taro", "email":"taro@example.com"}'
+curl -i -X POST -d '{"name":"taro", "email":"taro@example.com"}' http://localhost:8080/api/users/
 ```
 1. http://localhost:8080/api/users/で確認
 
