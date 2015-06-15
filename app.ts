@@ -1,5 +1,4 @@
 /// <reference path='../vendor/typings/jquery/jquery.d.ts' />
-
 import $ = require('jquery');
 import hello = require('./hello');
 // import rest = require('./rest');
