@@ -1,0 +1,41 @@
+{
+  "name": "typescript-app",
+  "version": "0.0.1",
+  "description": "typescript minimum app",
+  "main": "sample/dist/build.js",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/micro-typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "jquery"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.min.js"
+  },
+  "browserify": [ "js" ],
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "preinstall": "npm install -g tsc tsd browserify; tsd install jquery",
+    "start": "NODE_ENV=production NODE_PATH=",
+    "tsc": "tsc --outDir ./sample/js --module commonjs app.ts",
+    "browserify": "browserify ./sample/js/app.js > ./sample/dist/build.js",
+    "build": "npm run tsc; npm run browserify"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}

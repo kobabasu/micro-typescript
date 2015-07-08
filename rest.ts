@@ -1,4 +1,4 @@
-/// <reference path='../vendor/typings/jquery/jquery.d.ts' />
+/// <reference path='./typings/jquery/jquery.d.ts' />
 import $ = require('jquery');
 
 export class Rest {
@@ -16,7 +16,7 @@ export class Rest {
         console.log('error');
       },
       success: function(json) {
-        $.each(JSON.parse(json), function(i, item) {
+        $.each(json.data, function(i, item) {
           $('body').prepend(item.name + '<br>');
         });
       }
