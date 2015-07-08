@@ -17,5 +17,5 @@ hub clone kobabasu/micro-typescript src
 1. README.mdを参考に設定
 
 ## check
-1. `open sample/index.html -a Google\ Chrome`
-1. ブラウザで確認
+1. http://localhost:8080/src/sample/で確認  
+   `open sample/index.html -a Google\ Chrome`だとエラーとなる
