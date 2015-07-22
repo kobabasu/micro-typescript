@@ -29,7 +29,7 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "preinstall": "npm install -g tsc tsd browserify; tsd install jquery",
+    "preinstall": "npm install -g tsc tsd browserify; tsd install jquery babel babel-eslint",
     "start": "NODE_ENV=production NODE_PATH=",
     "tsc": "tsc --outDir ./sample/js --module commonjs app.ts",
     "browserify": "browserify ./sample/js/app.js > ./sample/dist/build.js",
