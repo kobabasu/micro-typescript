@@ -7,6 +7,7 @@
     "type": "git",
     "url": "//github.com/kobabasu/micro-typescript.git"
   },
+
   "keywords": [
     "typescript",
     "jquery"
@@ -16,11 +17,13 @@
     "linux",
     "!win32"
   ],
+
   "dependencies": {
     "jquery": "*"
   },
   "devDependencies": {
   },
+
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js"
   },
@@ -28,8 +31,12 @@
   "eslintConfig": {
     "parser": "babel-eslint"
   },
+
   "scripts": {
-    "preinstall": "npm install -g tsc tsd browserify; tsd install jquery",
+    "global": "npm install -g tsc tsd browserify; tsd install jquery babel babel-eslint",
+
+    "gitkeep": "touch ../js/.gitkeep; touch ../dist/.gitkeep;",
+    "preinstall": "mkdir ../{js,dist}; npm run gitkeep;",
     "start": "NODE_ENV=production NODE_PATH=",
     "tsc": "tsc --outDir ./sample/js --module commonjs app.ts",
     "browserify": "browserify ./sample/js/app.js > ./sample/dist/build.js",
